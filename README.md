@@ -1,4 +1,4 @@
-# Exercício da tarde
+# Exercício da tarde - Arquitetura III
 
 <strong>A partir dessa semana os exercícios da tarde voltam a ser independentes. Não se preocupe em centralizá-los em um mesmo repo.</strong>
 <br><br>
