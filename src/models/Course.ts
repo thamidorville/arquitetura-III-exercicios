@@ -1,31 +1,47 @@
-export class Course {    
-    constructor(
-        private id: string,
-        private name: string,
-        private lessons: number
-    ) {}
+export interface CourseDB {
+  id: string,
+  name: string,
+  lessons: number,
+  created_at: string
+}
 
-    public getId(): string {
-        return this.id
-    }
-    
-    public setId(value: string): void {
-        this.id = value
-    }
+export class Course {
+  constructor(
+    private id: string,
+    private name: string,
+    private lessons: number,
+    private createdAt: string
+  ) { }
 
-    public getName(): string {
-        return this.name
-    }
+  public getId(): string {
+    return this.id
+  }
 
-    public setName(value: string): void {
-        this.name = value
-    }
+  public setId(value: string): void {
+    this.id = value
+  }
 
-    public getLessons(): number {
-        return this.lessons
-    }
+  public getName(): string {
+    return this.name
+  }
 
-    public setLessons(value: number): void {
-        this.lessons = value
-    }
+  public getCreatedAt(): string {
+    return this.createdAt
+  }
+
+  public setName(value: string): void {
+    this.name = value
+  }
+
+  public getLessons(): number {
+    return this.lessons
+  }
+
+  public setLessons(value: number): void {
+    this.lessons = value
+  }
+
+  public setCreatedAt(value: string): void {
+    this.createdAt = value
+  }
 }
