@@ -4,7 +4,15 @@ import { NotFoundError } from "../errors/NotFoundError"
 import { CourseDB } from "../models/Course"
 import { Course } from "../models/Course"
 
-export class CourseBusiness {
+// exercicio 2: Implemente a injeção de dependências nas camadas Controller e Business.
+
+export class CourseBusiness { 
+//recebe uma instância de CourseDatabase
+  private courseDatabase: CourseDatabase;
+  constructor(courseDatabase: CourseDatabase){
+    this.courseDatabase = courseDatabase
+  }
+
   public getCourses = async (input: any) => {
     const { q } = input
 
